@@ -1,4 +1,4 @@
-var path = location.hash.substr(2);
+var path = decodeURIComponent(location.hash.substr(2));
 
 var converter = new Showdown.converter();
 var content = document.getElementById('content');
@@ -15,6 +15,7 @@ main();
 
 function main(){
 	if(path){
+		window.history.pushState(null, '', '/#!'+path);
 		disqus_url = hostbase + path;
 		content.innerHTML = 'loading...';
 		showpost(path);
