@@ -4,3 +4,5 @@ var githubname = 'hooloo';
 var repos = 'hooloo.github.io';
 var sitetitle = 'Hooloo';
 var rss = '';
+var suffix = '';
+var branch = '';
